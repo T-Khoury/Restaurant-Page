@@ -1,0 +1,14 @@
+@font-face {
+    font-family: 'Kablammo';
+    src: url('./Kablammo-Regular.ttf');
+}
+
+
+h1 {
+    font-family: 'Kablammo';
+}
+
+#content {
+    background: url('./LosTacospic.png');
+}
+
