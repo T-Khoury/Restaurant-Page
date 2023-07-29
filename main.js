@@ -1,0 +1,1 @@
+(()=>{"use strict";console.log("hello world and me"),function(){const e=document.getElementById("content"),t=document.createElement("header"),n=document.createElement("h1");n.textContent="Taco Delicioso",t.appendChild(n),e.appendChild(t)}()})();
