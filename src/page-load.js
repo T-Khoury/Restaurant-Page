@@ -1,20 +1,20 @@
+import createHeader from './header';
+import renderHome from './home';
+import createFooter from './footer';
+import renderMenu from './menu';
 
-
-
-function createHeader() {
-    const pageContent = document.getElementById('content');
-
-    const header = document.createElement('header')
-    const restaurantName = document.createElement('h1');
-    restaurantName.textContent = ('Taco Delicioso');
-
-    header.appendChild(restaurantName)
-
-    pageContent.appendChild(header);
-
-
+function pageLoad() {
+    createHeader();
+    renderMenu();
+    createFooter();
 };
 
-export default createHeader;
+export default pageLoad;
+
+
+
+
+
+
 
 

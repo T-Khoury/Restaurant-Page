@@ -4,11 +4,39 @@
 }
 
 
-h1 {
+h1, h2 {
     font-family: 'Kablammo';
 }
 
-#content {
-    background: url('./LosTacospic.png');
+footer {
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
 }
+
+footer a {
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.footer-logo {
+    height: 2rem;
+}
+
+#content {
+    background: url('./images/tacobig.png') no-repeat center fixed;
+    background-size: cover;
+    height: 98vh;
+    width: 98vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+#menu-item img {
+    height: 100px;
+    width: 100px;
+}
+
 
