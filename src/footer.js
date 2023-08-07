@@ -8,7 +8,7 @@ function createFooter() {
     
 
     const logo = document.createElement('img');
-    logo.setAttribute("src", "../src/images/github-mark-white.svg");
+    logo.setAttribute("src", "../src/images/icons/github-mark-white.svg");
     logo.setAttribute("class", "footer-logo");
 
     anchor.textContent = ('Created by T-Khoury as part of The Odin Project');
