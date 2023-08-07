@@ -1,5 +1,5 @@
 function createHeader() {
-    const pageContent = document.getElementById('content');
+    const docBody = document.body;
 
     const header = document.createElement('header');
     const restaurantName = document.createElement('h2');
@@ -15,6 +15,10 @@ function createHeader() {
     menuButton.setAttribute("class", "menu-button");
     contactButton.setAttribute("class", "contact-button");
 
+    homeButton.setAttribute("id", "tab");
+    menuButton.setAttribute("id", "tab");
+    contactButton.setAttribute("id", "tab");
+
     homeButton.textContent = ('Home');
     menuButton.textContent = ('Menu');
     contactButton.textContent = ('Contact');
@@ -28,7 +32,7 @@ function createHeader() {
 
 
 
-    pageContent.appendChild(header);
+    docBody.insertAdjacentElement('afterbegin', header);
 
 };
 

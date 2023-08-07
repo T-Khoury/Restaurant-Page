@@ -5,7 +5,7 @@ function renderHome() {
     const headline = document.createElement('h1');
     const description = document.createElement('p');
 
-    homeContent.setAttribute("id", "active-tab")
+    homeContent.setAttribute("id", "home")
 
     headline.textContent = ('Delicious and Authentic Tacos!');
     description.textContent = ('Treat yourself today!');
@@ -14,6 +14,8 @@ function renderHome() {
     homeContent.appendChild(description);
 
     pageContent.appendChild(homeContent);
+
+    return homeContent;
 
 }
 

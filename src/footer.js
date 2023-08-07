@@ -1,5 +1,5 @@
 function createFooter() {
-    const pageContent = document.getElementById('content');
+    const docBody = document.body;
 
     const footer = document.createElement('footer');
     const anchor = document.createElement('a');
@@ -17,7 +17,8 @@ function createFooter() {
     
 
     footer.appendChild(anchor);
-    pageContent.appendChild(footer);
+    docBody.insertAdjacentElement('beforeend', footer);
+
 
 }
 
