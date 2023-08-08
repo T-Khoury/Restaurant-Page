@@ -34,11 +34,7 @@ function website() {
         case "contact-button":
             renderContact();
             break;
-
     };
-    
- 
- 
  };
 
  
