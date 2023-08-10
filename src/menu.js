@@ -21,6 +21,41 @@ function renderMenu() {
     const sides = document.createElement('div');
     const drinks = document.createElement('div');
 
+    tacos.setAttribute('class', 'menu-section');
+    meals.setAttribute('class', 'menu-section');
+    sides.setAttribute('class', 'menu-section');
+    drinks.setAttribute('class', 'menu-section');
+
+    const tacosHeader = document.createElement('p');
+    const mealsHeader = document.createElement('p');
+    const sidesHeader = document.createElement('p');
+    const drinksHeader = document.createElement('p');
+
+    tacosHeader.setAttribute('class', 'menu-subheading');
+    mealsHeader.setAttribute('class', 'menu-subheading');
+    sidesHeader.setAttribute('class', 'menu-subheading');
+    drinksHeader.setAttribute('class', 'menu-subheading');
+
+    tacosHeader.textContent = ('Tacos');
+    mealsHeader.textContent = ('Plates');
+    sidesHeader.textContent = ('Sides');
+    drinksHeader.textContent = ('Drinks');
+
+    const tacosFood = document.createElement('div');
+    const mealsFood = document.createElement('div');
+    const sidesFood = document.createElement('div');
+    const drinksFood = document.createElement('div');
+
+    tacosFood.setAttribute('class', 'food-section');
+    mealsFood.setAttribute('class', 'food-section');
+    sidesFood.setAttribute('class', 'food-section');
+    drinksFood.setAttribute('class', 'food-section');
+
+    tacos.append(tacosHeader, tacosFood);
+    meals.append(mealsHeader, mealsFood);
+    sides.append(sidesHeader, sidesFood);
+    drinks.append(drinksHeader, drinksFood);
+
 
     const menuElements = menu.map((element) => createMenuElement(element));
 
@@ -28,16 +63,16 @@ function renderMenu() {
     menuElements.forEach((element) => {
         switch (element.getAttribute('class')) {
             case "Taco":
-                tacos.appendChild(element);
+                tacosFood.appendChild(element);
                 break;
             case "Meal":
-                meals.appendChild(element);
+                mealsFood.appendChild(element);
                 break;
             case "Side":
-                sides.appendChild(element);
+                sidesFood.appendChild(element);
                 break;
             case "Drink":
-                drinks.appendChild(element);
+                drinksFood.appendChild(element);
                 break;
             default:
                 console.log('oops');
@@ -46,6 +81,8 @@ function renderMenu() {
 
     menuContent.append(tacos, meals, sides, drinks);
     pageContent.appendChild(menuContent);
+
+    return menuContent;
 
 };
 
@@ -62,7 +99,7 @@ function createMenuElement(menuItem) {
     description.textContent = menuItem.description;
     picture.src = menuItem.picture;
 
-    menuItemElement.append(title, description, picture);
+    menuItemElement.append(title, picture, description);
 
     return menuItemElement;
 

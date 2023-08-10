@@ -6,7 +6,7 @@ import renderContact from './contact';
 
 function pageLoad() {
     createHeader();
-    renderContact();
+    renderHome();
     createFooter();
 };
 

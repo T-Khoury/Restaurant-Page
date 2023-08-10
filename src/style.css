@@ -2,10 +2,46 @@
     font-family: 'Kablammo';
     src: url('./Kablammo-Regular.ttf');
 }
+@font-face {
+    font-family: 'Lato';
+    src: url('./Lato-Regular.ttf');
+}
+body {
+    background: url('./images/tacobigger.png') no-repeat center fixed;
+    background-size: cover;
+    min-height: 98vh;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Lato';
+}
 
 
-h1, h2 {
+h1 {
     font-family: 'Kablammo';
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    backdrop-filter: blur(10px);
+    color: #EDAE49;
+    color: #ffc43d;
+    font-family: 'Kablammo';
+}
+
+header h2 {
+    margin-left: 4rem;
+    font-size: 2.5rem;
+}
+
+nav {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 8rem;
+    margin-right: 15rem;
+    align-self: center;
+    font-size: 1.5rem;
+    font-weight: bolder;
 }
 
 footer {
@@ -13,30 +49,119 @@ footer {
     display: flex;
     justify-content: center;
     align-items: flex-end;
+    margin-top: auto;
 }
 
 footer a {
     display: flex;
     flex-direction: row-reverse;
+    color: #fcfff7;
 }
 
 .footer-logo {
     height: 2rem;
 }
 
-#content {
-    background: url('./images/tacobig.png') no-repeat center fixed;
-    background-size: cover;
-    height: 98vh;
-    width: 98vw;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+
+#home {
+    text-align: center;
+    margin-top: 10rem;
+    backdrop-filter: blur(3px);
+    color: #f9f7f3;
+    color: #fdfcdc;
+    color: #f2542d;
+    color: #fcfff7;
+    font-family: 'Kablammo';
+    
+}
+#home h1 {
+    font-size: 4rem;
+}
+
+#home p {
+    font-size: 3rem;
+}
+
+#tab {
+    text-align: center;
+}
+
+
+#menu-item {
+    backdrop-filter: blur(5px);
+    width: 20rem;
+    display: grid;
+    justify-items: center;
+    background-color: #fcfff7;
+    margin: 1rem;
+    border-radius: 3%;
+}
+
+#menu {
+    color: #ffc43d;
+    background-color: rgba(0, 0, 0, 0.2);
+    margin: 2rem;
+    border-radius: 3%;
 }
 
 #menu-item img {
-    height: 100px;
-    width: 100px;
+    max-height: 150px;
+    min-width: 200px;
+}
+
+#menu-item p {
+    padding: 0 1rem;
+    font-size: 1.2rem;
+    text-align: center;
+}
+
+#menu-item h2 {
+    font-size: 1.7rem;
+}
+
+#contact {
+    text-align: center;
+    color: #fcfff7;
+    background-color: rgba(0, 0, 0, 0.2);
+    margin: 2rem;
+    border-radius: 3%;
+}
+
+#contact h1 {
+    font-size: 3rem;
+}
+
+#contact img {
+    filter: invert(100%);
+}
+
+.contact-info {
+    font-size: 1.7rem;
+}
+
+.menu-subheading {
+    font-family: 'Kablammo';
+    font-size: 3rem;
+    text-align: center;
+    color: #fcfff7;
+
+}
+
+/* .food-section {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    padding: 2rem;
+    justify-items: center;
+}
+*/
+
+
+
+.food-section {
+    display: flex;
+    column-gap: 3rem;
+    justify-content: center;
 }
 
 
